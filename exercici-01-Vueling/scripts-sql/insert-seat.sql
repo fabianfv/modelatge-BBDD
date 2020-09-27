@@ -1,0 +1,12 @@
+INSERT INTO `Exercise_1_Vueling`.`Seat` (`idSeat`, `idPlane`) VALUES ('1', '1');
+INSERT INTO `Exercise_1_Vueling`.`Seat` (`idSeat`, `idPlane`) VALUES ('2', '1');
+INSERT INTO `Exercise_1_Vueling`.`Seat` (`idSeat`, `idPlane`) VALUES ('3', '1');
+INSERT INTO `Exercise_1_Vueling`.`Seat` (`idSeat`, `idPlane`) VALUES ('4', '1');
+INSERT INTO `Exercise_1_Vueling`.`Seat` (`idSeat`, `idPlane`) VALUES ('5', '1');
+INSERT INTO `Exercise_1_Vueling`.`Seat` (`idSeat`, `idPlane`) VALUES ('1', '2');
+INSERT INTO `Exercise_1_Vueling`.`Seat` (`idSeat`, `idPlane`) VALUES ('2', '2');
+INSERT INTO `Exercise_1_Vueling`.`Seat` (`idSeat`, `idPlane`) VALUES ('3', '2');
+INSERT INTO `Exercise_1_Vueling`.`Seat` (`idSeat`, `idPlane`) VALUES ('4', '2');
+INSERT INTO `Exercise_1_Vueling`.`Seat` (`idSeat`, `idPlane`) VALUES ('5', '2');
+INSERT INTO `Exercise_1_Vueling`.`Seat` (`idSeat`, `idPlane`) VALUES ('6', '2');
+INSERT INTO `Exercise_1_Vueling`.`Seat` (`idSeat`, `idPlane`) VALUES ('7', '2');
