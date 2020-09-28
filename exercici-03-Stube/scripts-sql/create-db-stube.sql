@@ -29,7 +29,7 @@ CREATE UNIQUE INDEX `name_UNIQUE` ON `User` (`name` ASC);
 CREATE TABLE IF NOT EXISTS `Video` (
   `idVideo` VARCHAR(11) NOT NULL,
   `title` VARCHAR(45) NOT NULL,
-  `description` VARCHAR(100) NOT NULL,
+  `description` VARCHAR(1000) NOT NULL,
   `url` VARCHAR(45) NOT NULL,
   `idUser` INT NOT NULL,
   PRIMARY KEY (`idVideo`),
