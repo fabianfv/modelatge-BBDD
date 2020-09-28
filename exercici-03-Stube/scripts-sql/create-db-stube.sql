@@ -27,7 +27,7 @@ CREATE UNIQUE INDEX `name_UNIQUE` ON `User` (`name` ASC);
 -- Table `Video`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Video` (
-  `idVideo` INT NOT NULL,
+  `idVideo` VARCHAR(11) NOT NULL,
   `title` VARCHAR(45) NOT NULL,
   `description` VARCHAR(100) NOT NULL,
   `url` VARCHAR(45) NOT NULL,
@@ -41,6 +41,7 @@ CREATE TABLE IF NOT EXISTS `Video` (
 ENGINE = InnoDB;
 
 CREATE INDEX `fk_Video_User_idx` ON `Video` (`idUser` ASC);
+
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
