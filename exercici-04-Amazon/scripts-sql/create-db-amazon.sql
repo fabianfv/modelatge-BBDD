@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS `book` (
   `title` VARCHAR(100) NOT NULL,
   `description` VARCHAR(2000) NOT NULL,
   `stock` INT NOT NULL,
-  `price` DECIMAL(2) NOT NULL,
+  `price` DECIMAL(5,2) NOT NULL,
   PRIMARY KEY (`idBook`))
 ENGINE = InnoDB;
 
