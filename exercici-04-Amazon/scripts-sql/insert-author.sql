@@ -4,5 +4,5 @@ INSERT INTO author (idAuthor, firstName, lastName) VALUES
     ('3', 'Mariot', 'Tsioara'),
     ('4', 'Kyle', 'Sympson'),
     ('5', 'Carlos', 'Rojas'),
-    ('6', 'Richard Mathew', 'Stallman');
- 
+    ('6', 'Richard Mathew', 'Stallman'),
+    ('7', 'Sam', 'williams');

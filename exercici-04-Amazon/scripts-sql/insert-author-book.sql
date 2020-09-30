@@ -6,5 +6,5 @@ INSERT INTO author_book (`idAuthor`, `idBook`) VALUES
     ('5', '7'),
     ('6', '1'),
     ('7', '2'),
-    ('6', '8');
+    ('6', '7');
  

@@ -54,8 +54,17 @@ CREATE TABLE IF NOT EXISTS `invoice` (
   `idInvoice` INT NOT NULL AUTO_INCREMENT,
   `invoiceNumber` VARCHAR(45) NOT NULL,
   `date` DATE NOT NULL,
-  PRIMARY KEY (`idInvoice`))
+  `idUser` INT NOT NULL,
+  `total` DECIMAL(8,2) NOT NULL,
+  PRIMARY KEY (`idInvoice`),
+  CONSTRAINT `fk_invoice_user1`
+    FOREIGN KEY (`idUser`)
+    REFERENCES `user` (`idUser`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB;
+
+CREATE INDEX `fk_invoice_user1_idx` ON `invoice` (`idUser` ASC);
 
 
 -- -----------------------------------------------------
@@ -84,19 +93,15 @@ CREATE INDEX `fk_author_book_book1_idx` ON `author_book` (`idBook` ASC);
 -- Table `detail`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `detail` (
+  `idDetail` INT NOT NULL AUTO_INCREMENT,
   `idBook` INT NOT NULL,
-  `idUser` INT NOT NULL,
   `idInvoice` INT NOT NULL,
   `amount` INT NOT NULL,
-  PRIMARY KEY (`idBook`, `idUser`, `idInvoice`),
+  `subtotal` DECIMAL(8,2) NOT NULL,
+  PRIMARY KEY (`idDetail`),
   CONSTRAINT `fk_shop_book1`
     FOREIGN KEY (`idBook`)
     REFERENCES `book` (`idBook`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_detail_user1`
-    FOREIGN KEY (`idUser`)
-    REFERENCES `user` (`idUser`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_detail_invoice1`
@@ -105,8 +110,6 @@ CREATE TABLE IF NOT EXISTS `detail` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
-
-CREATE INDEX `fk_detail_user1_idx` ON `detail` (`idUser` ASC);
 
 CREATE INDEX `fk_detail_invoice1_idx` ON `detail` (`idInvoice` ASC);
 
