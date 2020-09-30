@@ -36,16 +36,16 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `brand` (
   `idBrand` INT NOT NULL AUTO_INCREMENT,
   `brandName` VARCHAR(45) NOT NULL,
-  `supplier_idSupplier` INT NOT NULL,
+  `idSupplier` INT NOT NULL,
   PRIMARY KEY (`idBrand`),
   CONSTRAINT `fk_brand_supplier1`
-    FOREIGN KEY (`supplier_idSupplier`)
+    FOREIGN KEY (`idSupplier`)
     REFERENCES `supplier` (`idSupplier`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE INDEX `fk_brand_supplier1_idx` ON `brand` (`supplier_idSupplier` ASC);
+CREATE INDEX `fk_brand_supplier1_idx` ON `brand` (`idSupplier` ASC);
 
 
 -- -----------------------------------------------------
@@ -59,16 +59,16 @@ CREATE TABLE IF NOT EXISTS `glass` (
   `colorLeft` VARCHAR(45) NOT NULL,
   `colorRight` VARCHAR(45) NOT NULL,
   `price` DECIMAL(6,2) NOT NULL,
-  `brand_idBrand` INT NOT NULL,
+  `idBrand` INT NOT NULL,
   PRIMARY KEY (`idGlass`),
   CONSTRAINT `fk_glass_brand1`
-    FOREIGN KEY (`brand_idBrand`)
+    FOREIGN KEY (`idBrand`)
     REFERENCES `brand` (`idBrand`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE INDEX `fk_glass_brand1_idx` ON `glass` (`brand_idBrand` ASC);
+CREATE INDEX `fk_glass_brand1_idx` ON `glass` (`idBrand` ASC);
 
 
 -- -----------------------------------------------------

@@ -1,4 +1,4 @@
-INSERT INTO brand (`idBrand`, `brandName`, `supplier_idSupplier`) VALUES
+INSERT INTO brand (idBrand, brandName, idSupplier) VALUES
 	('1', 'Arnette', '1'),
 	('2', 'Polaroid', '1'),
 	('3', 'Timberland', '2'),
